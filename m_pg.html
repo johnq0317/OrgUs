@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+				font-family: "Lato", sans-serif;
+			}
+
+			.sidenav {	
+				height: 100%;
+				width: 160px;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				background-color: #000080;
+				overflow-x: hidden;
+				padding-top: 20px;
+			}
+
+			.sidenav a {
+				padding: 6px 8px 6px 16px;
+				text-decoration: none;
+				font-size: 12px;
+				color: #000000;
+				display: block;
+			}
+
+			.sidenav a:hover {
+				color: #f1f1f1;
+			}
+
+			.main {
+				margin-left: 160px; /* Same as the width of the sidenav */
+				font-size: 12px; /* Increased text to enable scrolling */
+				padding: 0px 10px;
+			}
+
+			@media screen and (max-height: 450px) {
+				.sidenav {padding-top: 10px;}
+				.sidenav a {font-size: 12px;}
+			}
+			
+			 #accordion-1{font-size: 14px;}
+		</style>
+
+	<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	</head>
+
+	<body>
+
+		<div class="sidenav">
+			  <h3>Clubs</h3>
+				<div id = "clubs">
+				  <a href="#about">About</a>
+				  <a href="#services">Services</a>
+				  <a href="#clients">Clients</a>
+				  <a href="#contact">Contact</a>
+				</div>
+		</div>
+
+		<div class="main">
+		  <h2>Sidebar</h2>
+		  <p>This sidebar is of full height (100%) and always shown.</p>
+		  <p>Scroll down the page to see the result.</p>
+		  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		</div>
+	
+	<script>
+		var clubs = ['philsa', 'chilsa', 'vsa', 'csa', 'isa'];
+		for(var x=0;x<clubs.length;x++){
+			var temp = '<a href='+'\"#test\">'+clubs[x]+'</a>';
+			console.log(temp);
+			var element = document.getElementById('clubs');
+			if(element != null){
+				element.innerHTML += temp;
+				console.log("added to list");
+			}
+		}
+	</script>
+	</body>
+</html> 
